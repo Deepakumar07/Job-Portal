@@ -1,0 +1,182 @@
+<app-header></app-header>
+
+ <section class="main-content-area01 left col-12">
+    <div class="row">
+        <div class="left col-12">
+            <div class="left col-12 company-cover-image">
+                <div class="cci-area01">
+                    <img class="cvr-img-class" src="assets/images/cover-img.jpg" />
+                    <div class="cci-area02">
+                        <div class="cci-area02-logo res-img"><img src="assets/images/shell.png" /></div>
+                        <div class="cci-area02-text"><span><a>{{jobdetail[0].com_name}}</a></span></div>
+                    </div>
+                </div>
+
+            </div> <!-- company-cover-image-area -->
+
+            <div class="mca-left-area left">
+
+                <div class="company-des">
+                    <div class="heading02">
+                        <h4>{{jobdetail[0].com_name}}</h4>
+                    </div>
+
+                    <div class="company-des-area list-n left">
+                        <ul class="company-des-area-ul">
+                            <li><a href="#"><b>Job Name :</b>{{jobdetail[0].jobname}}</a></li>
+                            <li><a href="#"><b>Job type :</b> {{jobdetail[0].jobtype}}</a></li>
+                            <li><a href="#"><b>Due Date :</b> {{jobdetail[0].Due_date}}</a></li>
+                            <li><a href="#"><b>Company Email :</b><a>{{jobdetail[0].com_email}}</a></a></li>
+                            <li><a href="#"><b>Company Location :</b>{{jobdetail[0].com_location}}</a></li>
+
+                        </ul>
+                    </div>
+                </div> <!-- company-des -->
+
+
+                <div class="links-area-main left col-12">
+                    <a routerLink="/Hotarticle">
+                        <div class="links-area list-n left">
+                            <ul class="links-area-ul">
+
+                                <li><a class="hot-articles"> Hot Articles </a></li>
+                                <li>- How to write a CV </li>
+                                <li>- How to apply GE </li>
+                                <li>- How to pass interview </li>
+
+                            </ul>
+                        </div>
+                    </a>
+                </div>  <!-- links-area-main -->
+            </div>
+
+            <div class="mca-right-area left">
+
+                <div class="right-full-width-area left col-12">
+                    <h2>{{jobdetail[0].jobname}}</h2><br />
+                    <p class="p-graph-text"><b> Job Description :</b><br />{{jobdetail[0].job_description}}
+                    </p>
+
+
+                    <br><br>
+                    <br><br>
+                    <form #appform="ngForm" (ngSubmit)="applyjob(appform.value) ">
+                        <div class="forem-padding left">
+                            <h2 class=" align-center">Apply for this job</h2>
+                            <div class="sa-signup-form left col-12 form-select">
+                                <div class="sa-signup-form-left left">
+
+                                    <label class="name">Your Name<span>*</span></label>
+                                    <input type="name" name="app_name" class="sa-input col-12" ngModel  required>    
+                                </div>
+                                
+                                <div class="sa-signup-form-right right ">
+                                    <label class="name">Your Phone<span>*</span></label>
+                                    <input type="text"  name="app_number" maxlength="10"  class="sa-input col-12" ngModel required  >
+                                </div>
+                                <div class="sa-signup-form-left left">
+
+                                    <label class="name">Your Email<span>*</span></label>
+                                    <input type="email" name="app_email" class="sa-input col-12"  ngModel required >
+
+                                </div>
+                                <div class="sa-signup-form-right right">
+                                    <label class="name">Cover Letter<span>*</span></label>
+                                    <textarea type="name" name="cov_letter" class="sa-input col-12"  ngModel required>
+
+                                    </textarea>
+                                </div>
+                            </div>
+
+                            <div class="left col-12">
+                                <div class="sa-btn-location">
+                                    <a (click)="applyjob(appform.value)" class="sa-btn">Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+                <div class="heading03 left col-12">
+                    <a class="left headings" href="#">Similar Type Jobs </a>
+                </div>
+
+                <div class="left col-12 jobs-area list-n">
+
+                    <ul class="jobs-area-ul">
+                        
+                        <li *ngFor="let job of similarjobs | slice:0:arrayslice">
+                            <a (click)="jobdetails(job._id)" >
+                                <div class="jobs-area-ul-dv">
+                                    <div class="left jobs-area-ul-left-area">
+                                            <i class="sa-fire"></i>
+                                            <div style="overflow:hidden;">
+                                                <a >Job Title :{{job.jobname}}</a>
+                                                <p>
+                                                    <span class="span01">
+                                                        <span class="sa-bold">Company</span>
+                                                        <span class="span02">:</span> 
+                                                        <span>{{job.com_name}}</span>
+                                                    </span>
+                                                </p>
+                                                <p>
+
+                                                    <span class="span01">														
+                                                        <span class="sa-bold">Job type</span>
+                                                        <span class="span02">:</span> 
+                                                        <span>{{job.jobtype}}</span>
+                                                    </span><br>
+                                                </p>
+                                                <p>
+
+                                                    <span class="span01">
+                                                        <span class="sa-bold">Due Date</span>
+                                                        <span class="span02">:</span> 															
+                                                        <span>{{job.Due_date}}</span>	
+                                                    </span>
+                                                </p>
+                                                
+                                                <p>
+                                                    <span>
+                                                        <span class="sa-bold">3-word pitch</span>
+                                                        <span class="span02">:</span> 
+                                                        <span>{{job.word_pitch}}</span>
+                                                    </span>
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <span class="sa-bold">Job Description</span>
+                                                        <span class="span02">:</span> 
+                                                        <span>{{job.job_description | slice:0:130}}</span>
+                                                    </span>
+                                                </p>
+                                                
+                                            </div>
+                                    </div>
+                                    <div  class="right jobs-area-ul-right-area res-img">
+                                        <img src="assets/images/shell.png"/>
+                                        
+                                    </div>
+                                </div>
+                            
+                            </a>    
+                        </li>   
+                    </ul>
+                    <div *ngIf="similarjobs.length > 2" class="left col-12 sa-pagination-main">
+                        <ul class="sa-pagination">
+                            
+                            <a *ngIf="arrayslice < 3" (click)="loadmore()"><li class="sa-active"><span>Load All</span></li></a>
+                            <a *ngIf="arrayslice > 3" (click)="loadless()"><li class="sa-active"><span>Load less</span></li></a>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section> 
+
+<app-footer></app-footer>

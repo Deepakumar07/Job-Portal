@@ -1,0 +1,140 @@
+<app-header></app-header>
+
+<section class="main-content-area01 left col-12">
+    <div class="row">
+        <div class="left col-12">
+            <div class="left col-12 company-cover-image">
+                <div class="cci-area01">
+                    <img class="cvr-img-class" src="assets/images/cover-img.jpg"/>
+                     
+                </div>
+                
+            </div> <!-- company-cover-image-area -->
+        
+            <div class="mca-left-area left">
+                
+                 
+                
+                <!-- <div class="links-area-main left col-12">
+                    <div class="links-area list-n left">
+                        <ul class="links-area-ul">
+                            <li><a class="hot-articles" href="#">Hot Articles for This Company</a></li>
+                            <li><a href="#">Tips to Apply?</a></li>
+                            <li><a href="#">Tips For Interview </a></li>
+                            <li><a href="#">What's insider say?</a></li>
+                            <li><a href="#">How to pass interview </a></li>
+                            <li><a href="#">More... </a></li>
+                        </ul>
+                    </div>
+                </div>  --> <!-- links-area-main -->
+                
+                <div class="links-area-main left col-12">
+                    <div class="links-area list-n left">
+                        <ul class="links-area-ul">
+                            <li><a class="hot-articles" routerLink="/interview"> Hot Articles </a></li>
+                            <li><a (click)="getcv()">-  How to write a CV </a></li>
+                            <li><a (click)="getge()">-  How to apply GE </a></li>
+                            <li><a (click)="getinterview()" >-  How to pass interview </a></li>
+                            
+                            
+                            
+                        </ul>
+                    </div>
+                </div>  <!-- links-area-main -->
+            </div>
+            
+            <div *ngIf="getges" class="mca-right-area left">
+                
+                <div class="right-full-width-area left col-12">
+                    <h2>How to apply GE</h2>
+                <br>
+                    <p class="p-graph-text">
+
+                        The process can be lengthy, up to 3-4 months. Hiring process takes weeks, sometimes months. Very indepth interview and background checks. Took two to three weeks. <br><br>
+
+                        1. Research us on the internet.<br>
+                        2. Find your perfect career.<br>
+                        3. Submit your application.<br>
+                        4. Talk with a recruiter.<br>
+                        5. Talk with a hiring manager.<br>
+                        6. Take part in a panel.<br>
+                        7. Get hired!<br>
+                
+                    </p>
+                    
+                    
+                </div>
+                
+                
+                 
+                
+                 
+                
+            </div>
+            <div *ngIf="getcvs" class="mca-right-area left">
+                
+                <div class="right-full-width-area left col-12">
+                    <h2>How to write a CV</h2>
+                <br>
+                    <p class="p-graph-text"> 
+                        
+                        A standard format of a CV for a job should include the following sections:<br><br>
+
+                        1. Contact Information.<br>
+                        2. Personal Statement.<br>
+                        3. Professional Experience.<br>
+                        4. Academic History.<br>
+                        5. Key Skills and Qualifications.<br>
+                        6. Industry Awards.<br>
+                        7. Professional Certifications.<br>
+                        8. Publications.<br>
+                        9. Professional Affiliations.<br>
+                        10. Conferences Attended.<br>
+                        11. Additional Training.
+                        
+                
+                    </p>
+                    
+                    
+                </div>
+                
+                
+                 
+                
+                 
+                
+            </div>
+            <div *ngIf="getinterviews" class="mca-right-area left">
+                
+                <div class="right-full-width-area left col-12">
+                    <h2>How to pass interview</h2>
+                <br>
+                    <p class="p-graph-text"> 
+                        
+                
+                        Being invited to an interview means that the hiring team has reviewed your resume and recognizes your potential but they want to know more about what you could bring to the position. Here are some ways to present your best self in an interview and increase your chances of being hired: <br><br>
+
+                        1. Conduct thorough research.<br>
+                        2. Dress for the job you want.<br>
+                        3. Take your time.<br>
+                        4. Bring a notepad and pen.<br>
+                        5. Use facts and figures to demonstrate your achievements.<br>
+                        6. Be prepared for difficult questions.<br>
+                        7. Prepare your own questions.<br>
+                    </p>
+                    
+                    
+                </div>
+                
+                
+                 
+                
+                 
+                
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

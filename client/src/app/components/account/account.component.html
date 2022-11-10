@@ -1,0 +1,107 @@
+<app-header></app-header>
+<section class="main-content-area01 left col-12">
+    <div class="row">
+        <div class="left log-in-sign-up-form shadow">
+
+            <div class="left col-12 signup-heading">
+                <a href="#">
+                    <h2>Update Your Account</h2>
+                </a>
+            </div>
+            <div class="forem-padding left">
+                <form #adminform="ngForm" (ngSubmit)=" onsignUp(adminform.value, adminform.valid)">
+                    <div class="sa-signup-form left col-12 form-select">
+                        <div class="sa-signup-form-left left">
+                            <label class="name">Full Name<span>*</span></label><br>
+                            <input type="text" name="username" class="sa-input col-12" [ngModel]="getlogin.username" #username="ngModel" required>
+                            <span *ngIf="username.invalid && (username.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                Invalid Name
+                            </span><br>
+
+                            <label class="name">Email<span>*</span></label>
+                            <input type="email" name="email" class="sa-input col-12" [ngModel]="getlogin.email" #email="ngModel" required
+                                pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                            <span *ngIf="email.invalid &&(email.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                Invalid email
+                            </span>
+
+                            <span class="left col-12">
+                                <span class="left colstw">
+                                    <label class="name">Password<span>*</span></label>
+                                    <input type="password" name="password" class="sa-input col-12" ngModel #password="ngModel" required 
+                                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,10}$">
+                                    <span *ngIf="password.value ==='' && (password.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                        Enter new Password
+                                    </span><br>
+                                    <span *ngIf="password.invalid &&(password.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                        Password should contain atleast 8-10 char and special character
+                                    </span>
+                                </span>
+                                
+                                <span class="right colstw">
+                                    <label class="name">Confirm Password<span>*</span></label>
+                                    <input type="password" name="cofpass" class="sa-input col-12" ngModel #cofpass='ngModel' required>
+                                    <span *ngIf="  cofpass.touched &&  cofpass.value != password.value " style="color:red ;size: 11px;">
+                                        Invalid password
+                                    </span>
+                                </span>
+                            </span>
+
+                            <label class="name">Nationality<span>*</span></label>
+                            <input type="text" name="nationality" class="sa-input col-12" [ngModel]="getlogin.nationality" #nationality="ngModel" required
+                            ><br>
+                            <span *ngIf="nationality.invalid && (nationality.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                Field Required
+                            </span>
+
+                        
+                        </div>
+
+                        <div class="sa-signup-form-right right">
+
+                            <label class="name">University<span>*</span></label>
+                            <input type="text" name="university" class="sa-input col-12" [ngModel]="getlogin.university" #university="ngModel" required
+                            >
+                            <span *ngIf="university.invalid && (university.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                Field Required
+                            </span><br>
+
+                            <label class="name">Highest Degree<span>*</span></label>
+                            <input type="text" name="highest_Qualification" class="sa-input col-12" [ngModel]="getlogin.highest_Qualification" #highest_Qualification="ngModel" required
+                            >
+                            <span *ngIf="highest_Qualification.invalid &&(highest_Qualification.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                Field Required
+                            </span><br>
+                            <label class="name">Major<span>*</span></label>
+                            <input type="text" name="major" class="sa-input col-12" [ngModel]="getlogin.major" #major="ngModel" required
+                                >
+                            <span *ngIf="major.invalid &&(major.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                Field Required
+                            </span><br>
+                            <label class="name">Job Preference<span>*</span></label>
+                            <input type="text" name="job_prefrence" class="sa-input col-12" [ngModel]="getlogin.job_prefrence" #job_prefrence="ngModel" required
+                                >
+                            <span *ngIf="job_prefrence.invalid &&(job_prefrence.touched || adminform.submitted)" style="color:red ;size: 11px;">
+                                Field Required
+                            </span><br>
+                            <label class="name mobile-vw">&nbsp;</label>
+                            
+                        </div>
+
+
+                    </div>
+
+                    <div class="left col-12">
+                        <div class="sa-btn-location">
+                            <button type="submit" (click)="onsignUp(adminform.value,adminform.valid)" class="sa-btn">Update</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>

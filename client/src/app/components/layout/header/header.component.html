@@ -1,0 +1,45 @@
+<header >
+  <div class="top_bar">
+    <div class="left">
+      <ul>
+        <li>
+          <span class="icon"><img src="assets/images/calender.svg" alt=""></span>
+          <span class="txt">{{date |date: 'longDate'}}</span>
+        </li>
+        <li>
+          <span class="icon"><img src="assets/images/time.svg" alt=""></span>
+          <span class="txt">{{date | date: 'longTime'}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul>
+        <li *ngIf="username">
+          <span class="icon"><img src="assets/images/user.svg" alt=""></span>
+          <span class="txt">{{username}}</span>
+        </li> 
+        <li>
+          <a class="txt" (click)="logoutOrLogIn()">{{val}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<header id="header" class="res-img shadow">
+    <div class="row">
+        <div class="left col-12">
+            <div class="left logo">
+                <a routerLink="/Home"><img src="assets/images/logo.png"></a>
+            </div>
+            
+            <div class="right login_signup_links">
+               
+                <a class="login_link hllink left" routerLink="/Home" >Home </a>
+                <a class="signup_link hlbtn left" routerLink="/joblist"  >Jobs</a>
+                <a class="signup_link hlbtn left" (click)="postjob()"  >Post a Job</a>
+                
+            </div>
+           
+        </div>
+    </div>
+</header> 

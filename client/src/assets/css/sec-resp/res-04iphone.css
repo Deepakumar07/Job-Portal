@@ -1,0 +1,115 @@
+ /*  iphone 
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+	@media only screen and (min-width: 0px) and (max-width: 478px) {
+	
+	#header{position:relative;}
+	.main-content-area01{margin:20px 0;}
+	.mca-left-area{width:100%; margin:0px;}
+	.mca-right-area{width:100%; margin:20px 0;}
+	.filter-area-main{float:left; width:100%;}
+	.links-area-main{float:right; width:100%;}
+	.links-area{}
+	.slide_search{width:100%;}
+	.slide_search input{width:90%; padding:16px 8% 16px 2%;}
+	.footer-ul li{width:100%; display:block; border:none; margin:0 0 10px 0; border-bottom:1px solid #E0E0E0; float:left; padding:10px 0;}
+	.footer-ul li:last-child{width:100%; display:block; border:none;}
+	.footer-control{position:static;}
+	.sa-gotop{display:none;}
+	.main-search input{width:90%; padding:10px 8% 10px 2%;}
+	.slidemain_area{height:495px;}
+	.user-links-area{margin:20px 0 0 0;}
+	.feedback-link{display:none;}
+	.feedback-link02{display:block;}
+	.jobs-area-ul-left-area02 a{float:left; width:100%;}
+	.jobs-area-ul-left-area02 a span{margin:10px 0 0 0;}
+	.jobs-area-ul-left-area02 a span span{width:auto; text-align:center; margin:0px;}
+	
+	.cci-area01{min-height:0px; background:#003366; padding:10px 0;}
+	.cci-area02{position:relative; top:0px; left:0px; float:left; width:100%;}
+	.cvr-img-class{display:none;}
+	.cci-area02-logo{margin:auto; position:relative;}
+	.cci-area02-text{margin:10px 0; position:relative; width:100%; float:left; height:auto;}
+	.cci-area02-text span{float:left; width:100%; padding:10px 0; margin:0px;}
+	.header-search-area{margin:10px 0 0 0; width:100%;}
+	.header-search-area input{width:90%; padding:4px 8% 5px 2%;}
+	#select-sort{margin:10px 0 0 0;}
+	
+	
+	.social-site-login{width:100%;}
+	.loginor-area span{height:auto; line-height:15px; wisth:100%; }
+	.login-registration-areath{width:100%;}	
+	.form-area01{width:100%;}
+	.form-area02{width:100%;}
+	.loginor-area{width:100%; text-align:center;}
+	.login-registration-area{width:100%;}
+	
+	
+	.sa-signup-form-left{width:100%;}
+	.sa-signup-form-right{width:100%;}
+	.mobile-vw{display:none;}
+	.mobile-show{display:block;}
+	.txt-box-img{float:left; margin:0 0 20px 0;}
+	.signup-heading a{line-height:35px;}
+	.colstw{width:100%;}
+	.signup-heading a span{width:100%; float:left;}
+	/* new design css start */
+	.hoi-rec-inter h2{font-size:40px;}
+	.hoi-rec-inter h3{font-size:24px;}
+	.bx-wrapper .bx-prev{left:10px;}
+	.bx-wrapper .bx-next{right:10px;}
+	.hoi-col-left{width:100%;}
+	.hoi-col-right{width:100%;}
+	.hoi-form-left{width:100%;}
+	.hoi-form-right{width:100%;}
+	.hoi-sec-text{padding-top:20px;}
+	.hoi-explore{width:100%;float:left;padding:20px 0px;text-align:center;}
+	.bx-controls-direction{display:none;}
+	/* new design css end */
+	/* price css strat */
+	.pr-ul-heading li{width:55px;font-size:12px;}
+	.pr-ul-list li ul li{width:55px;font-size:12px;vertical-align:center;margin-top:0px;border-bottom:0px;}
+	.pr-ul-list li ul li:first-child{width:60px;font-size:12px;margin-top:0px;}
+	.pr-ul-heading li:first-child{width:60px;}
+	.pr-ul-list li ul li{height:74px;line-height:17px;}
+	.pr-hot-img{top:-23px;left:10px;}
+	/* price css end */
+	.img-left-area{height:556px;width:100%;}
+	.hoi-col-right{width:100%;}
+	.hoi-col-left{width:100%;}
+	.img-left-area-02{height:556px;}
+	.align-center p{font-size:18px;}
+	.center-img{width:150px;margin:10px auto;}
+	.center-img{width:150px;margin:10px auto;}
+	.img-left-arrow{left:109px;top:199px;}
+	.img-right-arrow{right:109px;top:199px;}
+	.img-bottomright-arrow{right:109px;bottom:-361px;}
+	.img-bottomleft-arrow{left:109px;bottom:-369px;}
+	/*-- community page css start --*/
+	.bx-cummunity-caption{display:none;}
+	.cm-serch-inner{width:100%;}
+	.cm-inner-margin{margin:10px 0%;}
+	#community .bx-wrapper .bx-pager{right:10px;}
+	.cm-learn-dutch-left{width:100%;}
+	.cm-dutch-schools{width:100%;padding:0px;}
+	.cm-ads{width:100%;}
+	.cm-ads-text{width:40%;margin-right:10px;float:left;}
+	.cm-learn-dutch-icon{width:27%;}
+	.cm-ads-text{height:auto;}
+	/*-- mba schools --*/
+	.mba-sidebar-left{width:100%;min-height:100px;}
+	.ba-content-right{width:100%}
+	.mba-schools-text-right{width:100%;}
+	.mba-schools-text-right p{padding:2px 24px 4px;}
+	.mba-schools-logo{width:85%;}
+	.mbs-schools-website{padding:2px 24px 4px;}
+	.mbs-contact-number{padding:2px 24px 4px;}
+	.mba-schools-logo-bottom{width:85%;margin-bottom:10px;}
+	.mba-schools-address{padding:5px;}
+	.logo01{width:230px;}
+	.mba-page-wrap{margin:15px 0 20px;}
+	}
+	
+	

@@ -1,0 +1,89 @@
+/* # ipad Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 1100px) and (max-width: 1200px) {
+.cm-learn-dutch-left{width:360px;}
+.bx-cummunity-caption{padding:19px 29px 59px;}
+.bx-btn-wrap{top:7px;}
+.cm-ads{width:17%;}
+.cm-dutch-schools ul li{width:140px;}
+.bx-wrapper .bx-pager {right:127px;}
+
+}
+@media only screen and (min-width: 1000px) and (max-width: 1100px) {
+
+.cm-learn-dutch-left{width:340px;}
+.cm-dutch-schools h3{font-size:24px;}
+.bx-cummunity-caption{padding:5px 30px 74px;}
+#community .bx-wrapper .bx-pager{right:130px;}
+
+.bx-btn-wrap{top:10px;}
+.cm-ads-text{height:103px;}
+.cm-dutch-schools ul li{width:140px;}
+}
+
+ /* Note: Design for a width of 768px */
+ 
+	@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  
+	
+	.mca-left-area{width:100%; margin:0px;}
+	.mca-right-area{width:100%; margin:20px 0;}
+	.filter-area-main{float:left; width:100%;}
+	.links-area-main{float:right; width:100%;}
+	.links-area{width:92%;}
+	
+	.dashboard{width:100%;}
+	.jobagent{width:100%;}
+	.feedback-link{display:none;}
+	.feedback-link02{display:block;}
+	
+	.header-search-area{margin:0 0 0 20px; width:400px;}
+	
+	.cci-area01{min-height:160px;}
+	
+	.social-site-login{width:100%;}
+	.loginor-area span{height:auto; line-height:15px; wisth:100%; }
+	.login-registration-areath{width:100%;}	
+	.form-area01{width:100%;}
+	.form-area02{width:100%;}
+	.loginor-area{width:100%; text-align:center;}
+	.login-registration-area{width:100%;}
+	
+	.sa-signup-form-left{width:100%;}
+	.sa-signup-form-right{width:100%;}
+	.mobile-vw{display:none;}
+	.mobile-show{display:block;}
+	.txt-box-img{float:left; margin:0 20px 0 0;}
+	/* new design css start */
+	.hoi-rec-inter h2{font-size:40px;}
+	.hoi-rec-inter h3{font-size:24px;}
+	.bx-wrapper .bx-prev{left:-15px;}
+	.bx-wrapper .bx-next{right:-15px;}
+	
+	/* new design css end */
+	/* price css strat */
+	.pr-ul-heading li{width:124px;}
+	.pr-ul-list li ul li{width:123px;}
+	.pr-ul-list li ul li:first-child{width:238px;}
+	.pr-ul-heading li:first-child{width:140px;}
+	/* price css end */
+	.img-left-area{height:556px;width:100%;}
+	.hoi-col-right{width:100%;}
+	.hoi-col-left{width:100%;}
+	.img-left-area-02{height:556px;}
+	
+	
+	/*-- community page css start --*/
+	.bx-cummunity-caption{display:none;}
+	.cm-serch-inner{width:32%;}
+	.cm-inner-margin{margin:10px 1%;}
+	#community .bx-wrapper .bx-pager{right:10px;}
+	.cm-learn-dutch-left{width:420px;}
+	.cm-dutch-schools{width:100%;}
+	.cm-ads{width:100%;}
+	.cm-ads-text{width:25%;margin-right:10px;float:left;}
+	/*-- mba schools --*/
+	.ba-content-right{width:75%;}
+	.mba-schools-logo-bottom{width:29%;}
+	}
+

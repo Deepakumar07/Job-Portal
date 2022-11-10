@@ -1,0 +1,105 @@
+<app-header></app-header>
+
+
+
+
+<section class="main-content-area01 left col-12 ">
+    <div class="row">
+        <div class="left log-in-sign-up-form shadow">
+
+            <div class="left col-12 signup-heading">
+                <a href="#">
+                    <h2>Post a Job</h2>
+                </a>
+            </div>
+            <div class="forem-padding left">
+                <form #postJob="ngForm" >
+                    <div class="sa-signup-form left col-12 form-select">
+                        <div class="sa-signup-form-left left">
+                            <label class="name">Job Name<span>*</span></label>
+                            <input type="text" name="jobname" class="sa-input col-12" ngModel #jobname="ngModel"
+                                required>
+                            <span *ngIf="jobname.invalid &&(jobname.touched || postJob.submitted)" style=" color:red;size:11px">Enter
+                                Name</span><br>
+
+                            <label class="text">Job Type<span>*</span></label>
+                            <input type="text" name="jobtype" class="sa-input col-12" ngModel #jobtype="ngModel"
+                                required>
+                            <span *ngIf="jobtype.invalid &&(jobtype.touched || postJob.submitted)" style=" color:red;size:11px">
+                              Field Required  </span><br>
+
+                            <label class="name">Job Description<span>*</span></label>
+                            <textarea type="text" name="job_description" class="sa-input col-12"
+                             style="width:96%!important;" ngModel
+                                #job_description="ngModel" required></textarea>
+                            <span *ngIf="job_description.invalid && (job_description.touched || postJob.submitted)"
+                                style=" color:red;size:11px">Field Required</span><br>
+
+                            <label class="name">Experience required<span>*</span></label>
+                            <input type="number" name="experince" class="sa-input col-12" ngModel #experience="ngModel"
+                                required>
+                            <span *ngIf="experience.invalid &&(experience.touched || postJob.submitted)" style=" color:red;size:11px">
+                              Enter Job experience  </span>
+
+                              
+
+                            <label class="name mobile-vw">&nbsp;</label>
+
+
+                        </div>
+
+                        <div class="sa-signup-form-right right">
+                            <label class="name">Company Name <span>*</span></label>
+                            <input type="text" name="com_name" class="sa-input col-12" ngModel #com_name="ngModel"
+                                required>
+                            <span *ngIf="com_name.invalid && (com_name.touched || postJob.submitted)" style=" color:red;size:11px">
+                                Field Required
+                            </span><br>
+                            <label class="name">Company Email<span>*</span></label>
+                            <input type="email" name="com_email" class="sa-input col-12"
+                                pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" ngModel #com_email="ngModel" required>
+                            <span *ngIf="com_email.invalid &&(com_email.touched || postJob.submitted)" style=" color:red;size:11px">
+                                Enter Email
+                            </span><br>
+                            <label class="name">Company location<span>*</span></label>
+                            <input type="search" name="com_location" class="sa-input col-12" ngModel
+                                #com_location="ngModel" required>
+                            <span *ngIf="com_location.invalid &&(com_location.touched || postJob.submitted)" style=" color:red;size:11px">
+                                Enter company Location
+                            </span><br>
+                            <label class="name">Enter the 3-Word Pitch For Job<span>*</span></label>
+                            <input type="text" name="word_pitch" class="sa-input col-12" ngModel #wordpitch="ngModel"
+                                required>
+                            <span *ngIf="wordpitch.invalid && (wordpitch.touched || postJob.submitted)" style=" color:red;size:11px">
+                                Field Empty
+                            </span><br>
+                            <label class="name">Enter Due Date<span>*</span></label>
+                            <input type="date" name="Due_date" class="sa-input col-12" ngModel #duedate="ngModel"
+                                required>
+                            <span *ngIf="duedate.invalid && duedate.touched" style=" color:red;size:11px">
+                                Field Empty
+                            </span><br>
+                            <label class="name">Featured<span>*</span></label>
+                            <input type="radio" name="featured" value="true" style="width:5%!important; " ngModel 
+                                class="sa-input col-12" [checked]="true"><span class="name">Yes</span><br /><br />
+                            <input type="radio" name="featured" value="false" style="width:5%!important;" ngModel
+                                class="sa-input col-12">No
+
+                        </div>
+
+                    </div>
+
+                    <div class="left col-12">
+                        <div class="sa-btn-location">
+                            <button type="submit" (click)="Onsubmit(postJob.value, postJob.valid)" class="sa-btn">Post a Job</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,77 @@
+
+
+<header id="header" class="res-img shadow">
+    <div class="row">
+        <div class="left col-12">
+            <div class="left logo">
+                <a  routerLink="/Home"><img src="assets/images/logo.png"></a>
+            </div>
+            
+            <div class="right login_signup_links">
+                <a class="signup_link hlbtn left" routerLink="/signup">Sign up</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<section class="main-content-area01 left col-12">
+    <div class="row">
+        <div class="left log-in-sign-up-form shadow">
+            <div class="forem-padding left">
+                <div class="left form-area01">
+                    <div class="social-site-login left">
+                        <button (click)="socialsignIN('linkedin')" class="col-12" style="background-color: #003366;margin-bottom: 12px;margin-top: 12px; padding:8px"><i class="left fa fa-linkedin-square"></i>Login with Linkedin</button>
+                        <button (click)="socialsignIN('facebook')" class=" col-12" style="background-color: blue;margin-bottom: 12px;padding:8px ;" ><i class="left fa fa-facebook-square"></i>Login with Facebook</button>
+                        <button (click)="socialsignIN('google')" class="col-12"  style="background-color:red;margin-bottom: 12px;padding:8px;"><i class="left fa fa-google-plus-square"></i>Login with Google +</button>
+                    </div>
+                </div>
+                <div class="left loginor-area"><span>Or</span></div>
+                <div class="right form-area02">
+                    <div class="right login-registration-area">
+                        <form #loginform="ngForm" (ngSubmit)=" onsubmit(loginform.value ,loginform.valid) ">
+                            <label class="lbl">Email Address</label>
+                            <input type="text" name="username" class="form-control" [ngModel]="this.username" #usernames="ngModel" autocomplete="off" required>
+                            <span *ngIf="usernames.invalid && (usernames.touched || loginform.submitted)" style="color: red; size: 11px;">Invalid username</span><br>
+                            
+                            
+                            <label class="lbl">Password</label>
+                            <input pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,10}$"
+                            type="password" name="password" class="form-control"  [ngModel]="password" #pasword="ngModel" required>
+                            <span *ngIf="pasword.value === '' && (pasword.touched || loginform.submitted)"  style="color: red; size: 11px;">Enter password</span><br>
+                            <span *ngIf="pasword.invalid &&  (pasword.touched || loginform.submitted)"  style="color: red; size: 11px;">Should contain min 8 character and special character </span>
+                        
+                            <span class="left col-12 remember-area01">
+                                <span class="sa-checkbox">
+                                    <input style="width:auto;" type="checkbox" name="RememberMe" class="left" id="lbl01" ngModel #remeber="ngModel">
+                                    <label for="lbl01" class="left">Remember me</label>
+                                </span>
+                                <a  class="right">Forgot Password?</a>
+                            </span>
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="left col-12">
+                    <div class="sa-btn-location">
+                        <button  type="submit" (click)="onsubmit(loginform.value, loginform.valid)" class="sa-btn">Sign in</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="left log-in-sign-up-form-nxt" id="signup-btn-area">
+            <a class="left col-12 align-c" href="#">If you haven&#8217;t an account yet, please</a>
+            <div class="sa-btn-location">
+                <a  class="sa-btn" routerLink="/signup">Sign up</a>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<div> 
